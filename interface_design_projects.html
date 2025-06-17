@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interface Design Projects</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Human Computer Interaction</h1>
+        <div class="image-gallery">
+            <!-- Thumbnails for the lightbox -->
+            <img src="img/HCI/Slide1.jpeg" alt="Description of image 1" onclick="openModal();currentSlide(1)">
+            <img src="img/HCI/Slide2.jpeg" alt="Description of image 2" onclick="openModal();currentSlide(2)">
+            <img src="img/HCI/Slide3.jpeg" alt="Description of image 3" onclick="openModal();currentSlide(3)">
+            <img src="img/HCI/Slide4.jpeg" alt="Description of image 4" onclick="openModal();currentSlide(4)">
+            <img src="img/HCI/Slide5.jpeg" alt="Description of image 5" onclick="openModal();currentSlide(5)">
+            <img src="img/HCI/Slide6.jpeg" alt="Description of image 6" onclick="openModal();currentSlide(6)">
+            <img src="img/HCI/Slide7.jpeg" alt="Description of image 7" onclick="openModal();currentSlide(7)">
+            <img src="img/HCI/Slide8.jpeg" alt="Description of image 8" onclick="openModal();currentSlide(8)">
+            <img src="img/HCI/Slide9.jpeg" alt="Description of image 9" onclick="openModal();currentSlide(9)">
+            <img src="img/HCI/Slide10.jpeg" alt="Description of image 10" onclick="openModal();currentSlide(10)">
+            <img src="img/HCI/Slide11.jpeg" alt="Description of image 11" onclick="openModal();currentSlide(11)">
+        </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 11</div>
+                <img src="img/HCI/Slide1.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 11</div>
+                <img src="img/HCI/Slide2.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 11</div>
+                <img src="img/HCI/Slide3.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 11</div>
+                <img src="img/HCI/Slide4.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 11</div>
+                <img src="img/HCI/Slide5.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 11</div>
+                <img src="img/HCI/Slide6.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">7 / 11</div>
+                <img src="img/HCI/Slide7.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">8 / 11</div>
+                <img src="img/HCI/Slide8.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">9 / 11</div>
+                <img src="img/HCI/Slide9.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">10 / 11</div>
+                <img src="img/HCI/Slide10.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">11 / 11</div>
+                <img src="img/HCI/Slide11.jpeg" style="width:100%">
+            </div>
+
+
+            <!-- Next/Previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

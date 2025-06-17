@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Engineering Project - Project Name</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="project-container">
+        <section id="project-overview">
+            <h1>Secret Lock</h1>
+            <p>What does the project do?</p>
+            <p>My project is a concealed lock that can be integrated into any object or location where additional security is needed. For example, a box, a door, or, in the case of the prototype for my project, a small jewelry box. By using a small jewelry box, I wanted to demonstrate that my lock prototype can be embedded anywhere.
+
+            The lock features a servo motor and a touch sensor button, enabling the setting and recognition of a secret knock, which is a sequence of strikes. The servo motor operates the lock mechanism, allowing the lid to be opened and closed. The system is powered by button cell batteries for convenience and portability.
+                
+            One of the key functionalities of the lock is its ability to "memorize" the secret knock by recording the timing between strikes. Additionally, it can recognize excessively fast or slow inputs, ensuring accurate detection of the secret knock.
+                
+            This hidden lock offers an innovative and versatile solution for enhancing security in various settings. Its discreet design and adaptable nature make it a valuable addition to safeguard belongings or restricted areas.</p>
+            <p>How does the project work?</p>
+            <p>The logic of my project is designed as follows: upon power connection, the recording function of the secret combination of strikes or knocks is initiated. All strikes and inputs are processed as interrupts, ensuring a high level of accuracy in recording and recognition. Initially, the system awaits the ﬁrst input. If a signal is received, it begins measuring the time between subsequent strikes and records them in its memory. If no signals are received within 3 seconds, the combination is considered complete. Subsequently, the recorded combination is replayed, the lid is closed, and the system enters a sleep mode to conserve energy.
+
+            Since interrupts are utilized, any triggering from the sensor will awaken the system and initiate the recognition of the secret knock by comparing the timing between strikes or inputs. To unlock the lock, the entire combination must match perfectly.</p>
+        </section>
+        <br>
+
+        <!-- Process -->
+        <section id="process">
+            <h2>Process</h2>
+            <p>The logic of my project is designed as follows: upon power connection, the recording function of the secret combination of strikes or knocks is initiated. All strikes and inputs are processed as interrupts, ensuring a high level of accuracy in recording and recognition. Initially, the system awaits the ﬁrst input. If a signal is received, it begins measuring the time between subsequent strikes and records them in its memory. If no signals are received within 3 seconds, the combination is considered complete. Subsequently, the recorded combination is replayed, the lid is closed, and the system enters a sleep mode to conserve energy.
+
+            Since interrupts are utilized, any triggering from the sensor will awaken the system and initiate the recognition of the secret knock by comparing the timing between strikes or inputs. To unlock the lock, the entire combination must match perfectly.</p>
+            <!-- Additional sub-sections or paragraphs as needed -->
+        </section>
+        <br>
+
+        <!-- Technologies Used -->
+        <section id="technologies">
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>Instruments:</li>
+                <p>❏ Soldering Iron Kit ❏ Soldering Tool Station ❏ Jewellery box ❏ Solder Wire Net ❏ Wire Stripper ❏ Nintendo Nano ATmega 328P</p>
+                <li>Other components:</li>
+                <p>❏ Micro Servo MG90S ❏ AA Battery holder ❏ Touch sensor button ❏ Mosfet IRFZ44N ❏ Computer Speaker ❏ Resistor 100 Ohm ❏ Resistor 10 k Ohm ❏ Super Glue ❏ Drill ❏ Paper Clip ❏ Double-side tape ❏ Hammer ❏ Pliers</p>
+            </ul>
+        </section>
+        <br>
+
+        <!-- Improvements-->
+        <section id="improvements">
+            <h2>Possible improvements:</h2>
+            <p>To further enhance my project, I suggest replacing the sensor with a digital sound sensor. This will allow clapping hands to be used instead of knocks to recognize the combination. This approach will be more convenient and intuitive for users.
+
+                Additionally, I would like to add vibration sensors and conﬁgure the system in such a way that the lock can be opened using a speciﬁc device, such as a remote control. This will add convenience and enable opening the object from a distance.
+                
+                Implementing these additional features will enhance the functionality of the project and expand its capabilities, providing more ﬂexibility and convenience in its use. Also, it will improve the ability of the locker security and mobility.</p>
+        </section>
+        <br>
+
+
+        <!-- Gallery or Media -->
+        <section id="gallery">
+            <h2>Gallery/Media</h2>
+            <div class="image-gallery">
+                <img src="img/a1.JPG" alt="Project Image Description">
+                <img src="img/a2.JPG" alt="Project Image Description">
+                <img src="img/a3.JPG" alt="Project Image Description">
+
+                <video width="720" height="480" controls>
+                    <source src="vid/a1.MOV" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video width="720" height="480" controls>
+                    <source src="vid/a2.MOV" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video width="720" height="480" controls>
+                    <source src="vid/a3.MOV" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video width="720" height="480" controls>
+                    <source src="vid/a4.MOV" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video width="720" height="480" controls>
+                    <source src="vid/a5.MOV" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video width="720" height="480" controls>
+                    <source src="vid/a6.MOV" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section id="Final">
+            <h2>Final video</h2>
+            <video width="720" height="480" controls>
+                <source src="vid/Secret Lock Video.mp4" type="video/quicktime">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

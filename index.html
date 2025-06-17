@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and links -->
+    <meta charset="UTF-8">
+    <title>Alexandra's Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/7e9c38d849.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <!-- Main content wrapper -->
+    <div id="wrapper">
+        <header>
+            <div id="logo">
+                <a href="#" title="Main page">
+                    <!-- Logo and Portfolio title -->
+                    <img src="img/logo.png" title="Alexandra's Portfolio" alt="Alexandra's Logo">
+                    <span>Alexandra's Portfolio</span>
+                </a>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                            <a class="nav-link" href="skills.html">Skills</a>
+                            <a class="nav-link" href="contacts.html">Contacts</a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Feedback button -->
+            <div id="reg_auth">
+                <a href="#" title="Portfolio feedback">
+                    <div id="btn">
+                        <p><a href="mailto:a.pastouchova0220211@arts.ac.uk">Give me feedback</a></p>
+                    </div>
+                </a>
+            </div>
+
+            <nav>
+                <!-- Search button and input field -->
+                <div id="search-container">
+                    <input type="text" id="search-input" placeholder="Search..." class="form-control">
+                    <button onclick="performSearch()" class="btn btn-primary">Search</button>
+                    <div id="search-results" style="display: none;"></div>
+                </div>
+            </nav>
+
+            <script>
+                const data = [
+                    { name: "p5.js Projects", url: "p5_js_projects.html" },
+                    { name: "Processing Projects", url: "processing_projects.html" },
+                    { name: "Python Games Projects", url: "python_games_projects.html" },
+                    { name: "Engineering Projects", url: "engineering_projects.html" },
+                    { name: "Interface Design Projects", url: "interface_design_projects.html" },
+                    { name: "Contacts", url: "contacts.html" },
+                    { name: "Projects", url: "projects.html" },
+                    { name: "Skills", url: "skills.html" },
+                    { name: "JavaScript Tips", url: "#javascriptTips" },
+                    { name: "Bootstrap Guide", url: "#bootstrapGuide" },
+                    { name: "HTML Basics", url: "#htmlBasics" }, 
+                    { name: "CSS Advanced Techniques", url: "#cssAdvTech" }, 
+                    { name: "JavaScript", url: "skills.html#javascript" }, 
+                    { name: "UI Design", url: "skills.html#uiDesign" } 
+                ];
+
+                
+                function performSearch() {
+                    const searchTerm = document.getElementById('search-input').value.trim().toLowerCase();
+                    const resultsContainer = document.getElementById('search-results');
+                    resultsContainer.style.display = 'none';
+                
+                    if (!searchTerm) {
+                        resultsContainer.innerHTML = "<p>Please enter a search term.</p>";
+                        resultsContainer.style.display = 'block';
+                        return;
+                    }
+                
+                    const filteredResults = data.filter(item => item.name.toLowerCase().includes(searchTerm));
+                
+                    if (filteredResults.length > 0) {
+                        const resultsMarkup = filteredResults.map(item =>
+                            `<a href="${item.url}" class="list-group-item list-group-item-action">${item.name}</a>`
+                        ).join('');
+                        resultsContainer.innerHTML = resultsMarkup;
+                    } else {
+                        resultsContainer.innerHTML = "<p>No results found.</p>";
+                    }
+                
+                    resultsContainer.style.display = 'block';
+                }
+            </script>
+                   
+        </header>
+
+
+    <div class="container mt-5">
+        <!-- Introduction section -->
+        <section id="introduction">
+            <h1>Welcome to Alexandra's Portfolio</h1>
+
+            <br>
+
+            <p>I'm creative computing student.</p>
+            <p>Currently, studying a Bachelor of Science degree at the University of the Arts (UAL).</p>
+
+            <br>
+
+            <p>Introduction to my studies:</p>
+            <p>My studies continue every day giving me more and more skills in design and computer programs, as well as programming language knowledge.</p>
+
+            <p>Knowledgeable in diverse software programs, programming languages, including Google programmes, Microsoft programmes, Adobe programs, Onshape, CAD, Figma, and other operating systems.</p>
+
+            <p>I also have a strong field background in Design Technology, Art and Design, Business, Chemistry, Maths, Photography, and Media Studies.</p>
+
+            <br>
+
+            <p>My hobbies:</p>
+            <p>I love swimming, horse riding and travelling.</p>
+
+            <p>Also, I love learning a facts about different cultures and learning a new languages. I decided some time ago to start learning Chinese language. </p>
+
+            <p>Ohhh, and I forgot to tell you that I love reading books. Currently, I'm reading a few.</p>
+            <p>You can check it here if you want:</p>
+        </section>
+
+        <section id="book-section">
+            <button id="scroll-left" class="scroll-btn">&lt;</button>
+            <div id="book-container">
+                <div class="book" style="background-image:url('img/erikson.jpg');">
+                    <span class="book-title">Steven Erikson: “Gardens of the Moon”</span>
+                </div>
+                <div class="book" style="background-image:url('img/kaku.jpg');">
+                    <span class="book-title">Michio Kaku: “Physics of the Impossible”</span>
+                </div>
+                <div class="book" style="background-image:url('img/castle1.jpg');">
+                    <span class="book-title">Diana Wynne Jones: "Howl's Moving Castle"</span>
+                </div>
+                <div class="book" style="background-image:url('img/castle2.jpg');">
+                    <span class="book-title">Diana Wynne Jones: "Castle in the Air"</span>
+                </div>
+                <div class="book" style="background-image:url('img/castle3.jpg');">
+                    <span class="book-title">Diana Wynne Jones: "House of Many Ways"</span>
+                </div>
+                <div class="book" style="background-image:url('img/AutomobileDesignGraphics.jpg');">
+                    <span class="book-title">"Automobile Design Graphics"</span>
+                </div>
+                <div class="book" style="background-image:url('img/designbetweenthelines.jpg');">
+                    <span class="book-title">"Design between the lines"</span>
+                </div>
+                <div class="book" style="background-image:url('img/sketching_product.jpeg');">
+                    <span class="book-title">"Sketching Product Design Presentation"</span>
+                </div>
+            </div>
+            <button id="scroll-right" class="scroll-btn">&gt;</button>
+        </section>
+
+         <!-- Content area remains same -->
+         <div id="content"></div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p>
+                <span id="copy-year">© </span> 
+                <script>
+                    document.getElementById('copy-year').textContent += new Date().getFullYear();
+                </script>
+                Alexandra's Portfolio. All rights reserved.
+            </p>
+            <div id="social">
+                <!-- Example Social media icons -->
+                <a href="https://www.linkedin.com/in/alexandra-pastouchova-04a23a1a4/" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Aki-chan-12" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var copyYearElement = document.getElementById('copy-year');
+            if (copyYearElement) {
+                copyYearElement.textContent += new Date().getFullYear();
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alexandra's Portfolio - Projects</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section id="projects-gallery">
+        <a href="processing_projects.html" class="project-item">
+            <img src="img/processing.jpeg" alt="processing">
+            <h3>Processing</h3>
+            <p>3 projects</p>
+        </a>
+        <a href="engineering_projects.html" class="project-item">
+            <img src="img/arduino.jpeg" alt="engineering projects">
+            <h3>Engineering projects</h3>
+            <p>1 project</p>
+        </a>
+        <a href="p5_js_projects.html" class="project-item">
+            <img src="img/p5js.jpeg" alt="p5.js">
+            <h3>p5.js</h3>
+            <p>3 projects</p>
+        </a>
+        <a href="interface_design_projects.html" class="project-item">
+            <img src="img/figma.jpeg" alt="interface design projects">
+            <h3>Interface design projects</h3>
+            <p>1 project</p>
+        </a>
+        
+
+        <!-- Modal for Project Details -->
+        <div id="project-modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <div id="modal-caption">
+                <h3 id="modal-title">Project Title</h3>
+                <p id="modal-description">Detailed description here...</p>
+            </div>
+            <a class="prev" onclick="changeProject(-1)">&#10094;</a>
+            <a class="next" onclick="changeProject(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Portfolio website",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Portflio website chatgpt"
+	}
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alexandra's Portfolio - Skills</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <div id="skills-container">
+        <div id="radialBarChart"></div>
+        <!-- Skill bubbles -->
+        <div id="skill-bubble">
+            <div class="skill-bubble">JavaScript</div>
+            <div class="skill-bubble">HTML</div>
+            <div class="skill-bubble">CSS</div>
+            <div class="skill-bubble">Bootstrap</div>
+            <div class="skill-bubble">Python</div>
+            <div class="skill-bubble">p5.js</div>
+            <div class="skill-bubble">Processing</div>
+            <div class="skill-bubble">Arduino</div>
+            <div class="skill-bubble">Software Design</div>
+            <div class="skill-bubble">UI and UX Design</div>
+            <div class="skill-bubble">Figma</div>
+            <div class="skill-bubble">Research</div>
+            <div class="skill-bubble">Essay Writing</div>
+            <div class="skill-bubble">Teamwork</div>
+            <div class="skill-bubble">Time Management</div>
+            <div class="skill-bubble">Problem Solving</div>
+            <div class="skill-bubble">Communication</div>
+            <div class="skill-bubble">Documentation</div>
+            <div class="skill-bubble">Audio Editing</div>
+            <div class="skill-bubble">Computer Skills</div>
+            <div class="skill-bubble">Microsoft Resources and Google</div>
+            <div class="skill-bubble">Google Resources</div>
+            <div class="skill-bubble">Adobe Photoshop</div>
+            <div class="skill-bubble">Adobe Lightroom</div>
+            <div class="skill-bubble">Adobe Premiere</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        const bubbles = document.querySelectorAll('.skill-bubble');
+        const positions = [];
+        const safetyNet = 100; // Max attempts to find a non-overlapping position
+    
+        function checkOverlap(newBubble, positions) {
+            return positions.some(pos => {
+                const dx = pos.x - newBubble.x;
+                const dy = pos.y - newBubble.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                return distance < (pos.radius + newBubble.radius) * 1.1; // Buffer to prevent touching
+            });
+        }
+    
+        bubbles.forEach(bubble => {
+            let overlap, count = 0;
+            do {
+                overlap = false;
+                // Generate random position
+                const x = Math.random() * (window.innerWidth - bubble.offsetWidth);
+                const y = Math.random() * (window.innerHeight - bubble.offsetHeight);
+                const radius = bubble.offsetWidth / 2;
+    
+                // Check for overlap with already placed bubbles
+                overlap = checkOverlap({x: x + radius, y: y + radius, radius: radius}, positions);
+    
+                if (!overlap) {
+                    positions.push({x: x + radius, y: y + radius, radius: radius});
+                    bubble.style.left = `${x}px`;
+                    bubble.style.top = `${y}px`;
+                }
+                count++;
+            } while (overlap && count < safetyNet);
+    
+            // Apply subtle floating animation within their own space
+            anime({
+                targets: bubble,
+                translateX: anime.random(-10, 10),
+                translateY: anime.random(-10, 10),
+                scale: [1, anime.random(0.95, 1.05)],
+                easing: 'easeInOutSine',
+                duration: 10000,
+                loop: true,
+                direction: 'alternate'
+            });
+        });
+    </script>
+</body>
+</html>
