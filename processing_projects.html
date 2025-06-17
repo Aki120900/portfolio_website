@@ -5,6 +5,30 @@
     <title>Processing Projects</title>
     <link rel="stylesheet" href="main.css">
     <script src="slider.js" defer></script>
+    <style>
+        .slide {
+          display: block;
+          padding: 2em;
+          box-sizing: border-box;
+        }
+        .slide-content {
+          margin-bottom: 1.5em;
+        }
+    
+        .video-container {
+          width: 80%;           
+          max-width: 1200px;    
+          margin: 0 auto;        
+          aspect-ratio: 21 / 9;  
+          background: #000;      
+          position: relative;
+        }
+        .video-container iframe {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+        }
+      </style>
 </head>
 <body>
     <div class="slider">
@@ -43,13 +67,14 @@
                     <p>Originally, I had planned to incorporate only Wassily Kandinsky's "Homage to Grohmann" into my code. However, I was truly inspired by the colour palette in Gerhard Richter's "Abstract Painting 599." It left such a profound impression on me that I couldn't resist merging the two artworks in my project. I envisioned using Gerhard Richter's "Abstract Painting 599" as the background, allowing the geometric shapes to boldly emerge against the vibrant canvas and creating an intriguing exotic composition. Imagine the interplay of colours and forms, producing mesmerising visual effects that transport us into the realm of abstract art.</p>
                     <p>My goal was to capture the essence and style of both artists, merging their works into a unique and awe-inspiring piece of art that will captivate and delight viewers. Additionally, I aimed to infuse the ﬁnal creation with a sense of depth and emotion, inviting observers to explore the depths of artistic expression.</p>
                 </div>
-
-                <video width="720" height="480" controls>
-                    <source src="vid/Vector_abstraction.mov" type="video/mp4">
-                    <source src="vid/Vector_abstraction.mov" type="video/quicktime">
-                    Your browser does not support the video tag.
-                </video>
-                
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/PJq_ryPBEZ4"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
+                </div>
             </div>
             <!-- Slide 2 -->
             <div class="slide" style="background-image: url('img/project2.jpg');">
@@ -98,12 +123,14 @@
                     To decrease the volume, click on the downward arrow button. Each click will decrease the volume slightly. Similar to the upward arrow button, the downward arrow button will animate by changing color to red and slightly increasing in size.
                         
                     The particles and sparkles will respond to the volume changes. When the volume is increased, the particles and sparkles will move faster, creating a more dynamic visual effect. When the volume is decreased, the particles and sparkles will slow down. You can experiment with clicking the buttons multiple times to adjust the volume and observe the changes in the particle and sparkle movement.</p>
-
-                    <video width="720" height="480" controls>
-                        <source src="vid/sound_and_visuals_video.mov" type="video/mp4">
-                        <source src="vid/sound_and_visuals_video.mov" type="video/quicktime">
-                        Your browser does not support the video tag.
-                    </video>
+                </div>
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/JcpDV-ffJUc"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
             </div>
             <!-- Slide 3 -->
@@ -136,15 +163,16 @@
                         
                     6. Watch as the leaves elegantly respond to the changing winds, creating a mesmerizing dance in the forest.</p>
                 </div>
-
-                <video width="720" height="480" controls>
-                    <source src="vid/Forest_scene_vide_clip.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/xerufPbwt7Q"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
+                </div>
             </div>
         </div>
     </div>
-
-
 </body>
 </html>
